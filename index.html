@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> DD AD Software Internship Test</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="./factorial_calculator.js"></script>
+    <script src="./fibonacci.js"></script>
+    <script src="./palindrome_checker.js"></script>
+
+</head>
+<body>
+    
+    <div class="container">
+        <div class="card mt-5">
+            <div class="card-body">
+              <h5 class="card-title mb-5">DD AD Software Internship Test</h5>
+              <div class="form-group ml-5">
+                <label for="factorial">Put a Number To Get The Factorial Of The Number</label><br>
+                <input id="factorial" type="number" >
+                <button onclick="calculate_factorial()" class="btn btn-primary">Get Result</button>
+                <div id="factorial_Result"></div>
+              </div>
+              <div class="form-group ml-5">
+                <label for="fibonacci">Put a Number To Get The Required Fibonacci Series</label><br>
+                <input id="fibonacci" type="number" >
+                <button onclick="calculate_fibonacci()" class="btn btn-primary">Get Result</button>
+                <div id="fibonacci_Result"></div>
+              </div>
+              <div class="form-group ml-5">
+                <label for="palindrome">Put a Word To Check If It's A Palindrome Or Not</label><br>
+                <input id="palindrome" type="text" >
+                <button onclick="calculate_palindrome()" class="btn btn-primary">Get Result</button>
+                <div id="palindrome_Result"></div>
+              </div>
+            </div>
+          </div>
+    </div>
+
+</body>
+</html>

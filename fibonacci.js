@@ -12,14 +12,18 @@ const fibonacci = (x, memo = {}) => {
     fib.push(memo[x]);
     return memo[x];
   } else {
-    console.log(
-      "Please Put A Number Less Than Or Equal To 20 And Greated Than 1"
-    );
+    alert("Please Put A Number Less Than Or Equal To 20 And Greated Than 1");
   }
 };
-const x = 8;
-const res = fibonacci(x);
+
 // fib.forEach((num) => console.log(num));
-for (let i = 0; i < x; i++) {
-  console.log(fib[i]);
-}
+
+const calculate_fibonacci = () => {
+  const x = document.getElementById("fibonacci").value;
+  fibonacci(x);
+  const res_div = document.getElementById("fibonacci_Result");
+  for (let i = 0; i < x; i++) {
+    console.log(fib[i]);
+    res_div.innerHTML = `<br>Required Fibonacci Series: ${fib}`;
+  }
+};

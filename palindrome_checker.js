@@ -1,3 +1,4 @@
+let result = "";
 const is_palindrome = (str) => {
   if (str.length < 1) {
     return true;
@@ -20,12 +21,21 @@ const check_palindrome = (str) => {
   len % 2 == 0 ? "Even Palindrome" : "Odd Palindrome";
 
   if (is_palindrome(str)) {
-    console.log(len);
+    result = len;
+    document.getElementById(
+      "palindrome_Result"
+    ).innerHTML = `<br>The Word Is: ${result}`;
   } else {
-    console.log("Not a Palindrome");
+    result = "Not a Palindrome";
+    document.getElementById(
+      "palindrome_Result"
+    ).innerHTML = `<br>The Word Is: ${result}`;
   }
 };
 
-let str = "ssee2344s";
-str = str.toLowerCase();
-check_palindrome(str);
+const calculate_palindrome = () => {
+  let str = document.getElementById("palindrome").value;
+  str = str.toLowerCase();
+  check_palindrome(str);
+  console.log(result);
+};
